@@ -6,17 +6,17 @@
 //  лучше обойтись исключительно массивами.
 
 
-string[]matrix= new string[4]{"Hello", "2", "world", ":-)"};
-string[]matrix1=new string[matrix.Length];
+string[]array= new string[4]{"Hello", "2", "world", ":-)"};
+string[]array1=new string[array.Length];
 
-void GetNewArray(string[]matrix, string[]matrix1)
+void GetNewArray(string[]array, string[]array1)
 {
     int N = 0;
-    for(int i = 0;i<=matrix.Length; i++)
+    for(int i = 0;i<array.Length; i++)
     {
-        if( matrix[i].Length<=3)
+        if( array[i].Length<=3)
         {
-            matrix1[N]=matrix[i];
+           array1[N]=array[i];
             N++;
         }
     }
@@ -26,10 +26,10 @@ void PrintArray(string[]array)
 {
     for(int i=0; i<array.Length;i++)
     {
-    Console.Write($"{matrix1[i]} ");
+    Console.Write($"{array1[i]} ");
     };
     Console.WriteLine();
 }
-GetNewArray(matrix,matrix1);
-PrintArray(matrix1);
+GetNewArray(array,array1);
+PrintArray(array1);
 
